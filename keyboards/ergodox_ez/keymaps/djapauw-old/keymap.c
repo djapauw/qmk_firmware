@@ -17,7 +17,7 @@
 
 #include QMK_KEYBOARD_H
 #include "version.h"
-
+#include "print.h"
 #include "keymap_spanish.h"
 
 enum layers {
@@ -41,7 +41,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  *   | Ctlr |Home  | PgDn | PgUp | End  |                                       | Left | Down |  Up  | Right| Ctrl |
  *   `----------------------------------'                                       `----------------------------------'
  *                                        ,--------------.        ,--------------.
- *                                        | Esc  |Numeric|        | Qwer |Insert |
+ *                                        | GUIL |Numeric|        | Qwer | GUIR |
  *                                 ,------|------|-------|        |------+-------+------.
  *                                 |      |      | Insert|        |Prints|       |      |
  *                                 |Backsp|  Del |-------|        |------|  ENT  |Space |
@@ -56,7 +56,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_LSFT,    KC_Z,       KC_X,           KC_C,           KC_V,        KC_B,        MO(_MEDIA),
         KC_LCTL,    KC_HOME,    KC_PGDN,        KC_PGUP,         KC_END,
 
-                                                                            KC_ESC,     MO(_NUMERIC),
+                                                                            KC_LGUI,     MO(_NUMERIC),
                                                                                         KC_INS,
                                                                 KC_BSPC,    KC_DEL,     KC_LALT,
 
@@ -64,7 +64,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_EQUAL,       KC_6,           KC_7,       KC_8,       KC_9,       KC_0,       KC_MINS,
         KC_LBRC,        KC_J,           KC_L,       KC_U,       KC_Y,       KC_SCLN,    KC_RBRC,
                         KC_H,           KC_N,       KC_E,       KC_I,       KC_O,       KC_QUOT,
-        MO(_MEDIA),     KC_K,           KC_M,       KC_COMM,    KC_DOT,     KC_UP,      KC_RSFT,
+        MO(_MEDIA),     KC_K,           KC_M,       KC_COMM,    KC_DOT,     KC_SLSH,    KC_RSFT,
                         KC_LEFT,        KC_DOWN,    KC_UP,      KC_RGHT,    KC_RCTL,
 
         DF(_QWERTY),     KC_RGUI,
